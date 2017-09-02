@@ -29,10 +29,10 @@ main(int argc, char **argv)
 	int	partnr;
 	bstr_t	*sysex;
 	int	ret;
-	bstr_t	*outp;
+	bstr_t	*out;
 
 	sysex = NULL;
-	outp = NULL;
+	out = NULL;
 
 	prognam = argv[0];
 	cmd = E2TXT_CMD_NONE;
@@ -87,8 +87,8 @@ main(int argc, char **argv)
 	}
 
 	/* Execute command. */
-	outp = binit();
-	if(sysex == NULL) {
+	out = binit();
+	if(out == NULL) {
 		fprintf(stderr, "Couldn't allocate bstr for output data.\n");
 		buninit(&sysex);
 		exit(-1);
@@ -96,17 +96,17 @@ main(int argc, char **argv)
 
 	switch(cmd) {
 	case E2TXT_CMD_SOUNDPATCH:
-		ret = e2c_convert_soundpatch(outp, sysex, partnr);
+		ret = e2c_convert_soundpatch(out, sysex, partnr);
 		if(ret != 0) {
 			fprintf(stderr, "Couldn't convert soundpatch.\n");
 		}
-		btofilep(stdout, outp);
+		btofilep(stdout, out);
 		break;
 	}
 
 
 
-	buninit(&outp);
+	buninit(&out);
 	buninit(&sysex);
 
 	return 0;

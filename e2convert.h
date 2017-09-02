@@ -12,7 +12,7 @@ typedef struct e2_part {
 	unsigned char	ep_scale_mode;				/* 5	 */
 	unsigned char	ep_part_pri;				/* 6	 */
 	unsigned char	ep_reserved1;				/* 7	 */
-	unsigned short	ep_osc;					/* 8,9	 */
+	unsigned short	ep_osc_type;				/* 8,9	 */
 	unsigned char	ep_reserved2;				/* 10	 */
 	unsigned char	ep_osc_edit;				/* 11	 */
 	unsigned char	ep_filt_type;				/* 12	 */
@@ -63,6 +63,16 @@ typedef struct e2_mfx {
 
 int e2c_check_sysex(bstr_t *);
 int e2c_convert_soundpatch(bstr_t *, bstr_t *, int);
+
+const char *e2c_get_osc_name(int);
+
+
+
+
+#define E2CONV_OSC_TYPE_CNT	409
+
+const char	*e2c_osc_type_names[];
+
 
 
 #endif
