@@ -27,7 +27,11 @@ e2c_convert_soundpatch(bstr_t *out, bstr_t *sysex, int partnr)
 	    partnr < 1 || partnr > E2CONV_MAXPART) {
 		return EINVAL;
 	}
+
+
 	
+
+	return 0;
 
 }
 
