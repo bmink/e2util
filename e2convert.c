@@ -116,8 +116,312 @@ const char      *e2c_osc_type_names[] = {
         "Blast [Snare]",		/* 112 */
         "Reverse1 [Snare]",		/* 113 */
         "Reverse2 [Snare]",		/* 114 */
-        "PureEight [Clap]",		/* 115 */
 
+        "PureEight [Clap]",		/* 115 */
+        "AmbEight [Clap]",		/* 116 */
+        "DirtySouth [Clap]",		/* 117 */
+        "PureNine [Clap]",		/* 118 */
+        "Mixed [Clap]",			/* 119 */
+        "Trap [Clap]",			/* 120 */
+        "Small [Clap]",			/* 121 */
+        "Clapper [Clap]",		/* 122 */
+        "Doubler [Clap]",		/* 123 */
+        "EastCoast [Clap]",		/* 124 */
+        "LiteClap [Clap]",		/* 125 */
+        "DDD1 [Clap]",			/* 126 */
+        "Crispy [Clap]",		/* 127 */
+        "B.Boy [Clap]",			/* 128 */
+        "Crumbles [Clap]",		/* 129 */
+        "FingerSnap [Clap]",		/* 130 */
+
+        "NineClose1 [HiHat]",		/* 131 */
+        "NineOpen1 [HiHat]",		/* 132 */
+        "NineClose2 [HiHat]",		/* 133 */
+        "NineOpen2 [HiHat]",		/* 134 */
+        "EightClose1 [HiHat]",		/* 135 */
+        "EightOpen1 [HiHat]",		/* 136 */
+        "EightOpen2 [HiHat]",		/* 137 */
+        "CompClose [HiHat]",		/* 138 */
+        "CompOpen [HiHat]",		/* 139 */
+        "EastClose [HiHat]",		/* 140 */
+        "EastOpen [HiHat]",		/* 141 */
+        "DDD1Close [HiHat]",		/* 142 */
+        "DDD1Open [HiHat]",		/* 143 */
+        "WarmClose [HiHat]",		/* 144 */
+        "WarmOpen [HiHat]",		/* 145 */
+        "ZeeClose [HiHat]",		/* 146 */
+        "ZeeOpen [HiHat]",		/* 147 */
+        "RoomyClose [HiHat]",		/* 148 */
+        "RoomyOpen [HiHat]",		/* 149 */
+        "RockClose [HiHat]",		/* 150 */
+        "RockOpen [HiHat]",		/* 151 */
+        "JazzClose [HiHat]",		/* 152 */
+        "JazzOpen [HiHat]",		/* 153 */
+        "HoppyClose [HiHat]",		/* 154 */
+        "HoppyOpen [HiHat]",		/* 155 */
+        "PhaseClose [HiHat]",		/* 156 */
+        "PhaseOpen [HiHat]",		/* 157 */
+        "NuHopClose [HiHat]",		/* 158 */
+        "NuHopOpen [HiHat]",		/* 159 */
+        "RightClose [HiHat]",		/* 160 */
+        "RightOpen [HiHat]",		/* 161 */
+        "NoizClose [HiHat]",		/* 162 */
+        "NoizOpen [HiHat]",		/* 163 */
+        "GranClose [HiHat]",		/* 164 */
+        "GranOpen [HiHat]",		/* 165 */
+        "Ambi [HiHat]",			/* 166 */
+        "Crackle [HiHat]",		/* 167 */
+        "Hippy [HiHat]",		/* 168 */
+        "Pump [HiHat]",			/* 169 */
+        "Voice1 [HiHat]",		/* 170 */
+        "Voice2 [HiHat]",		/* 171 */
+        "Reverse [HiHat]",		/* 172 */
+
+        "NineCym [Cymbal]",		/* 173 */
+        "HiCymbal [Cymbal]",		/* 174 */
+        "DoncaMatic [Cymbal]",		/* 175 */
+        "EastCoast [Cymbal]",		/* 176 */
+        "Rock [Cymbal]",		/* 177 */
+        "Synth [Cymbal]",		/* 178 */
+        "WhiteNoiz [Cymbal]",		/* 179 */
+        "RevCrash [Cymbal]",		/* 180 */
+        "NineRide [Cymbal]",		/* 181 */
+        "JazzRide1 [Cymbal]",		/* 182 */
+        "JazzRide2 [Cymbal]",		/* 183 */
+        "RockRide [Cymbal]",		/* 184 */
+        "ZeeRide [Cymbal]",		/* 185 */
+        "RevRide [Cymbal]",		/* 186 */
+
+        "Real Hi [Tom]",		/* 187 */
+        "Real MidHi [Tom]",		/* 188 */
+        "Real MidLo [Tom]",		/* 189 */
+        "Real Lo [Tom]",		/* 190 */
+        "Driven [Tom]",			/* 191 */
+        "Zee Hi [Tom]",			/* 192 */
+        "Zee Lo [Tom]",			/* 193 */
+        "OldSkool [Tom]",		/* 194 */
+        "Crunchy [Tom]",		/* 195 */
+        "E.Tom [Tom]",			/* 196 */
+        "Synth Hi1 [Tom]",		/* 197 */
+        "Synth Mid1 [Tom]",		/* 198 */
+        "Synth Lo1 [Tom]",		/* 199 */
+        "Synth Hi2 [Tom]",		/* 200 */
+        "Synth Lo2 [Tom]",		/* 201 */
+        "TomEight [Tom]",		/* 202 */
+
+        " [Perc.]",		/* 203 */
+        " [Perc.]",		/* 204 */
+        " [Perc.]",		/* 205 */
+        " [Perc.]",		/* 206 */
+        " [Perc.]",		/* 207 */
+        " [Perc.]",		/* 208 */
+        " [Perc.]",		/* 209 */
+        " [Perc.]",		/* 210 */
+        " [Perc.]",		/* 211 */
+        " [Perc.]",		/* 212 */
+        " [Perc.]",		/* 213 */
+        " [Perc.]",		/* 214 */
+        " [Perc.]",		/* 215 */
+        " [Perc.]",		/* 216 */
+        " [Perc.]",		/* 217 */
+        " [Perc.]",		/* 218 */
+        " [Perc.]",		/* 219 */
+        " [Perc.]",		/* 220 */
+        " [Perc.]",		/* 221 */
+        " [Perc.]",		/* 222 */
+        " [Perc.]",		/* 223 */
+        " [Perc.]",		/* 224 */
+        " [Perc.]",		/* 225 */
+        " [Perc.]",		/* 226 */
+        " [Perc.]",		/* 227 */
+        " [Perc.]",		/* 228 */
+        " [Perc.]",		/* 229 */
+        " [Perc.]",		/* 230 */
+        " [Perc.]",		/* 231 */
+        " [Perc.]",		/* 232 */
+        " [Perc.]",		/* 233 */
+        " [Perc.]",		/* 234 */
+        " [Perc.]",		/* 235 */
+        " [Perc.]",		/* 236 */
+        " [Perc.]",		/* 237 */
+        " [Perc.]",		/* 238 */
+        " [Perc.]",		/* 239 */
+        " [Perc.]",		/* 240 */
+        " [Perc.]",		/* 241 */
+        " [Perc.]",		/* 242 */
+        " [Perc.]",		/* 243 */
+        " [Perc.]",		/* 244 */
+        " [Perc.]",		/* 245 */
+        " [Perc.]",		/* 246 */
+        " [Perc.]",		/* 247 */
+        " [Perc.]",		/* 248 */
+        " [Perc.]",		/* 249 */
+        " [Perc.]",		/* 250 */
+        " [Perc.]",		/* 251 */
+        " [Perc.]",		/* 252 */
+        " [Perc.]",		/* 253 */
+        " [Perc.]",		/* 254 */
+        " [Perc.]",		/* 255 */
+        " [Perc.]",		/* 256 */
+        " [Perc.]",		/* 257 */
+
+        " [Voice]",		/* 258 */
+        " [Voice]",		/* 259 */
+        " [Voice]",		/* 260 */
+        " [Voice]",		/* 261 */
+        " [Voice]",		/* 262 */
+        " [Voice]",		/* 263 */
+        " [Voice]",		/* 264 */
+        " [Voice]",		/* 265 */
+        " [Voice]",		/* 266 */
+        " [Voice]",		/* 267 */
+        " [Voice]",		/* 268 */
+        " [Voice]",		/* 269 */
+        " [Voice]",		/* 270 */
+        " [Voice]",		/* 271 */
+        " [Voice]",		/* 272 */
+        " [Voice]",		/* 273 */
+
+        " [Synth Fx]",		/* 274 */
+        " [Synth Fx]",		/* 275 */
+        " [Synth Fx]",		/* 276 */
+        " [Synth Fx]",		/* 277 */
+        " [Synth Fx]",		/* 278 */
+        " [Synth Fx]",		/* 279 */
+        " [Synth Fx]",		/* 280 */
+        " [Synth Fx]",		/* 281 */
+        " [Synth Fx]",		/* 282 */
+        " [Synth Fx]",		/* 283 */
+        " [Synth Fx]",		/* 284 */
+        " [Synth Fx]",		/* 285 */
+        " [Synth Fx]",		/* 286 */
+        " [Synth Fx]",		/* 287 */
+        " [Synth Fx]",		/* 288 */
+        " [Synth Fx]",		/* 289 */
+        " [Synth Fx]",		/* 290 */
+        " [Synth Fx]",		/* 291 */
+
+        " [Synth Hit]",		/* 292 */
+        " [Synth Hit]",		/* 293 */
+        " [Synth Hit]",		/* 294 */
+        " [Synth Hit]",		/* 295 */
+        " [Synth Hit]",		/* 296 */
+        " [Synth Hit]",		/* 297 */
+        " [Synth Hit]",		/* 298 */
+        " [Synth Hit]",		/* 299 */
+        " [Synth Hit]",		/* 300 */
+        " [Synth Hit]",		/* 301 */
+        " [Synth Hit]",		/* 302 */
+        " [Synth Hit]",		/* 303 */
+        " [Synth Hit]",		/* 304 */
+        " [Synth Hit]",		/* 305 */
+        " [Synth Hit]",		/* 306 */
+        " [Synth Hit]",		/* 307 */
+        " [Synth Hit]",		/* 308 */
+        " [Synth Hit]",		/* 309 */
+
+        " [Inst.Hit]",		/* 310 */
+        " [Inst.Hit]",		/* 311 */
+        " [Inst.Hit]",		/* 312 */
+        " [Inst.Hit]",		/* 313 */
+        " [Inst.Hit]",		/* 314 */
+        " [Inst.Hit]",		/* 315 */
+        " [Inst.Hit]",		/* 316 */
+        " [Inst.Hit]",		/* 317 */
+        " [Inst.Hit]",		/* 318 */
+        " [Inst.Hit]",		/* 319 */
+        " [Inst.Hit]",		/* 320 */
+        " [Inst.Hit]",		/* 321 */
+        " [Inst.Hit]",		/* 322 */
+        " [Inst.Hit]",		/* 323 */
+        " [Inst.Hit]",		/* 324 */
+        " [Inst.Hit]",		/* 325 */
+
+        " [Synth]",		/* 326 */
+        " [Synth]",		/* 327 */
+        " [Synth]",		/* 328 */
+        " [Synth]",		/* 329 */
+        " [Synth]",		/* 330 */
+        " [Synth]",		/* 331 */
+        " [Synth]",		/* 332 */
+        " [Synth]",		/* 333 */
+        " [Synth]",		/* 334 */
+        " [Synth]",		/* 335 */
+        " [Synth]",		/* 336 */
+        " [Synth]",		/* 337 */
+        " [Synth]",		/* 338 */
+        " [Synth]",		/* 339 */
+        " [Synth]",		/* 340 */
+        " [Synth]",		/* 341 */
+        " [Synth]",		/* 342 */
+        " [Synth]",		/* 343 */
+        " [Synth]",		/* 344 */
+        " [Synth]",		/* 345 */
+        " [Synth]",		/* 346 */
+        " [Synth]",		/* 347 */
+        " [Synth]",		/* 348 */
+        " [Synth]",		/* 349 */
+        " [Synth]",		/* 350 */
+        " [Synth]",		/* 351 */
+        " [Synth]",		/* 352 */
+        " [Synth]",		/* 353 */
+        " [Synth]",		/* 354 */
+        " [Synth]",		/* 355 */
+        " [Synth]",		/* 356 */
+        " [Synth]",		/* 357 */
+        " [Synth]",		/* 358 */
+        " [Synth]",		/* 359 */
+        " [Synth]",		/* 360 */
+        " [Synth]",		/* 361 */
+        " [Synth]",		/* 362 */
+        " [Synth]",		/* 363 */
+        " [Synth]",		/* 364 */
+        " [Synth]",		/* 365 */
+        " [Synth]",		/* 366 */
+        " [Synth]",		/* 367 */
+        " [Synth]",		/* 368 */
+        " [Synth]",		/* 369 */
+        " [Synth]",		/* 370 */
+        " [Synth]",		/* 371 */
+        " [Synth]",		/* 372 */
+        " [Synth]",		/* 373 */
+        " [Synth]",		/* 374 */
+        " [Synth]",		/* 375 */
+        " [Synth]",		/* 376 */
+        " [Synth]",		/* 377 */
+        " [Synth]",		/* 378 */
+        " [Synth]",		/* 379 */
+        " [Synth]",		/* 380 */
+
+        " [Instrument]",		/* 381 */
+        " [Instrument]",		/* 382 */
+        " [Instrument]",		/* 383 */
+        " [Instrument]",		/* 384 */
+        " [Instrument]",		/* 385 */
+        " [Instrument]",		/* 386 */
+        " [Instrument]",		/* 387 */
+        " [Instrument]",		/* 388 */
+        " [Instrument]",		/* 389 */
+        " [Instrument]",		/* 390 */
+        " [Instrument]",		/* 391 */
+        " [Instrument]",		/* 392 */
+        " [Instrument]",		/* 393 */
+        " [Instrument]",		/* 394 */
+        " [Instrument]",		/* 395 */
+        " [Instrument]",		/* 396 */
+        " [Instrument]",		/* 397 */
+        " [Instrument]",		/* 398 */
+        " [Instrument]",		/* 399 */
+        " [Instrument]",		/* 400 */
+        " [Instrument]",		/* 401 */
+        " [Instrument]",		/* 402 */
+        " [Instrument]",		/* 403 */
+        " [Instrument]",		/* 404 */
+        " [Instrument]",		/* 405 */
+        " [Instrument]",		/* 406 */
+        " [Instrument]",		/* 407 */
+        " [Instrument]",		/* 408 */
+        "Audio In [Audio In]",	/* 409 */
 
 	NULL
 };
@@ -158,6 +462,17 @@ const char      *e2c_scale_mode_names[] = {
 const char      *e2c_part_pri_names[] = {
         "Normal",		/* 0 */
         "High",			/* 1 */
+	NULL
+};
+
+const char      *e2c_file_type_names[] = {
+        "Off",			/* 0 */
+        "Electribe LPF",	/* 1 */
+        "MS20 LPF",		/* 1 */
+        "MG LPF",		/* 1 */
+        "P5 LPF",		/* 1 */
+        "OB LPF",		/* 1 */
+        "Acid LPF",		/* 1 */
 	NULL
 };
 
@@ -202,6 +517,7 @@ e2c_convert_soundpatch(bstr_t *out, bstr_t *sysex, int partnr)
 	bprintf(out, "=== Part %d ===\n", partnr);
 	bprintf(out, "Osc Type: |%d| %s\n", (part->ep_osc_type + 1),
 	    e2c_get_name(e2c_osc_type_names, part->ep_osc_type + 1));
+	bprintf(out, "Osc Edit: |%d|\n", part->ep_osc_edit);
 	bprintf(out, "Mute: |%d| %s\n", part->ep_mute,
 	    e2c_get_name(e2c_mute_names, part->ep_mute));
 	bprintf(out, "Voice Assign: |%d| %s\n", part->ep_voice_assign,
@@ -215,8 +531,9 @@ e2c_convert_soundpatch(bstr_t *out, bstr_t *sysex, int partnr)
 	    e2c_get_name(e2c_scale_mode_names, part->ep_scale_mode));
 	bprintf(out, "Part Priority: |%d| %s\n", part->ep_part_pri,
 	    e2c_get_name(e2c_part_pri_names, part->ep_part_pri));
-
-
+	bprintf(out, "Filter Type: |%d| %s\n", part->ep_filt_type,
+	    e2c_get_name(e2c_file_type_names, part->ep_filt_type));
+	bprintf(out, "Filter Cutoff: |%d|\n", part->ep_filt_cutoff);
 
 
 

@@ -74,6 +74,7 @@ const char	*e2c_motion_sequence_names[];
 const char	*e2c_tp_velocity_names[];
 const char	*e2c_scale_mode_names[];
 const char	*e2c_part_pri_names[];
+const char	*e2c_file_type_names[];
 
 
 
