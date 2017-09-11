@@ -64,14 +64,16 @@ typedef struct e2_mfx {
 int e2c_check_sysex(bstr_t *);
 int e2c_convert_soundpatch(bstr_t *, bstr_t *, int);
 
-const char *e2c_get_osc_name(int);
+const char *e2c_get_name(const char **, int);
 
-
-
-
-#define E2CONV_OSC_TYPE_CNT	409
 
 const char	*e2c_osc_type_names[];
+const char	*e2c_mute_names[];
+const char	*e2c_voice_assign_names[];
+const char	*e2c_motion_sequence_names[];
+const char	*e2c_tp_velocity_names[];
+const char	*e2c_scale_mode_names[];
+const char	*e2c_part_pri_names[];
 
 
 

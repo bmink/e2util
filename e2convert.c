@@ -119,10 +119,47 @@ const char      *e2c_osc_type_names[] = {
         "PureEight [Clap]",		/* 115 */
 
 
-
-        "Lazy [Kick]"			/* 002 */
+	NULL
 };
 
+const char      *e2c_mute_names[] = {
+        "Off",			/* 0 */
+        "On",			/* 1 */
+	NULL
+};
+
+const char      *e2c_voice_assign_names[] = {
+        "Mono1",		/* 0 */
+        "Mono2",		/* 1 */
+        "Poly1",		/* 2 */
+        "Poly2",		/* 3 */
+	NULL
+};
+
+const char      *e2c_motion_sequence_names[] = {
+        "Off",			/* 0 */
+        "Smooth",		/* 1 */
+        "TriggerHold",		/* 2 */
+	NULL
+};
+
+const char      *e2c_tp_velocity_names[] = {
+        "Off",			/* 0 */
+        "On",			/* 1 */
+	NULL
+};
+
+const char      *e2c_scale_mode_names[] = {
+        "Off",			/* 0 */
+        "On",			/* 1 */
+	NULL
+};
+
+const char      *e2c_part_pri_names[] = {
+        "Normal",		/* 0 */
+        "High",			/* 1 */
+	NULL
+};
 
 
 int
@@ -163,21 +200,49 @@ e2c_convert_soundpatch(bstr_t *out, bstr_t *sysex, int partnr)
 	mfx = (e2_mfx_t *) (buf + E2CONV_MFX_OFFSET);
 
 	bprintf(out, "=== Part %d ===\n", partnr);
-	bprintf(out, "Osc Type: (%d) %s\n", (part->ep_osc_type + 1),
-	    e2c_get_osc_name(part->ep_osc_type + 1));
+	bprintf(out, "Osc Type: |%d| %s\n", (part->ep_osc_type + 1),
+	    e2c_get_name(e2c_osc_type_names, part->ep_osc_type + 1));
+	bprintf(out, "Mute: |%d| %s\n", part->ep_mute,
+	    e2c_get_name(e2c_mute_names, part->ep_mute));
+	bprintf(out, "Voice Assign: |%d| %s\n", part->ep_voice_assign,
+	    e2c_get_name(e2c_voice_assign_names, part->ep_voice_assign));
+	bprintf(out, "Motion Sequence: |%d| %s\n", part->ep_motion_sequence,
+	    e2c_get_name(e2c_motion_sequence_names, part->ep_motion_sequence));
+	bprintf(out, "Trigger Pad Velocity: |%d| %s\n",
+	    part->ep_tp_velocity,
+	    e2c_get_name(e2c_tp_velocity_names, part->ep_tp_velocity));
+	bprintf(out, "Scale Mode: |%d| %s\n", part->ep_scale_mode,
+	    e2c_get_name(e2c_scale_mode_names, part->ep_scale_mode));
+	bprintf(out, "Part Priority: |%d| %s\n", part->ep_part_pri,
+	    e2c_get_name(e2c_part_pri_names, part->ep_part_pri));
 
+
+
+
+
+	bprintf(out, "\n", partnr);
+	bprintf(out, "Last Step: |%d|\n", part->ep_last_step);
 
 	return 0;
 }
 
 
 const char *
-e2c_get_osc_name(int oscnr)
+e2c_get_name(const char **name_table, int nr)
 {
+	const char	**cur;
+	int		i;
 
-	if(oscnr < 0 || oscnr > E2CONV_OSC_TYPE_CNT)
+	if(nr < 0)
 		return "Unknown";
-		
-	return e2c_osc_type_names[oscnr];
+
+	i = 0;
+	for(cur = name_table; *cur != NULL; ++cur) {
+		if(i == nr)
+			return *cur;
+		++i;
+	}
+
+	return "Unknown";
 }
 
