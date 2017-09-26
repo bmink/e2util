@@ -486,6 +486,12 @@ const char      *e2c_eg_on_names[] = {
 	NULL
 };
 
+const char      *e2c_mfx_send_on_names[] = {
+        "Off",			/* 0 */
+        "On",			/* 1 */
+	NULL
+};
+
 const char      *e2c_groove_type_names[] = {
 	NULL
 };
@@ -540,67 +546,88 @@ e2c_convert_soundpatch(bstr_t *out, bstr_t *sysex, int partnr)
 	mfx = (e2_mfx_t *) (buf + E2CONV_MFX_OFFSET);
 
 	bprintf(out, "=== Part %d ===\n", partnr);
-	bprintf(out, "Osc Type: |%d| %s\n", (part->ep_osc_type + 1),
+	bprintf(out, "\n");
+	bprintf(out, "Oscillator\n");
+	bprintf(out, " Type: |%d| %s\n", (part->ep_osc_type + 1),
 	    e2c_get_name(e2c_osc_type_names, part->ep_osc_type + 1));
-	bprintf(out, "Osc Edit: |%d|\n", part->ep_osc_edit);
-	bprintf(out, "Mute: |%d| %s\n", part->ep_mute,
-	    e2c_get_name(e2c_mute_names, part->ep_mute));
-	bprintf(out, "Voice Assign: |%d| %s\n", part->ep_voice_assign,
-	    e2c_get_name(e2c_voice_assign_names, part->ep_voice_assign));
-	bprintf(out, "Motion Sequence: |%d| %s\n", part->ep_motion_sequence,
-	    e2c_get_name(e2c_motion_sequence_names, part->ep_motion_sequence));
-	bprintf(out, "Trigger Pad Velocity: |%d| %s\n",
-	    part->ep_tp_velocity,
-	    e2c_get_name(e2c_tp_velocity_names, part->ep_tp_velocity));
-	bprintf(out, "Scale Mode: |%d| %s\n", part->ep_scale_mode,
-	    e2c_get_name(e2c_scale_mode_names, part->ep_scale_mode));
-	bprintf(out, "Part Priority: |%d| %s\n", part->ep_part_pri,
-	    e2c_get_name(e2c_part_pri_names, part->ep_part_pri));
-	bprintf(out, "\n", partnr);
-	bprintf(out, "Filter Type: |%d| %s\n", part->ep_filt_type,
+	bprintf(out, " Edit: |%d|\n", part->ep_osc_edit);
+	bprintf(out, " Pitch: |%d|\n", part->ep_osc_pitch);
+	bprintf(out, " Glide: |%d|\n", part->ep_osc_glide);
+	bprintf(out, "\n");
+
+	bprintf(out, "Filter\n");
+	bprintf(out, " Type: |%d| %s\n", part->ep_filt_type,
 	    e2c_get_name(e2c_filt_type_names, part->ep_filt_type));
-	bprintf(out, "Filter Cutoff: |%d|\n", part->ep_filt_cutoff);
-	bprintf(out, "Filter Resonance: |%d|\n", part->ep_filt_res);
-	bprintf(out, "Filter EG Int: |%d|\n", part->ep_filt_egint);
-	bprintf(out, "\n", partnr);
-	bprintf(out, "Mod Type: |%d| %s\n", part->ep_mod_type,
+	bprintf(out, " Cutoff: |%d|\n", part->ep_filt_cutoff);
+	bprintf(out, " Resonance: |%d|\n", part->ep_filt_res);
+	bprintf(out, " EG Int: |%d|\n", part->ep_filt_egint);
+	bprintf(out, "\n");
+
+	bprintf(out, "Modulation\n");
+	bprintf(out, " Type: |%d| %s\n", part->ep_mod_type,
 	    e2c_get_name(e2c_mod_type_names, part->ep_mod_type));
-	bprintf(out, " Mod Speed: |%d|\n", part->ep_mod_speed);
-	bprintf(out, " Mod Depth: |%d|\n", part->ep_mod_depth);
-	bprintf(out, "\n", partnr);
-	bprintf(out, "EG: |%d| %s\n", part->ep_eg_on,
-	    e2c_get_name(e2c_eg_on_names, part->ep_eg_on));
-	if(part->ep_eg_on) {
-		bprintf(out, " EG Attack: |%d|\n", part->ep_eg_attack);
-		bprintf(out, " EG Decay/Release: |%d|\n",
-		    part->ep_eg_decayrel);
-	}
-
-	bprintf(out, "Amp Level: |%d|\n", part->ep_amp_level);
-	bprintf(out, "Amp Pan: ");
-	if(part->ep_amp_pan == 0)
-		bprintf(out, "Center");
+	bprintf(out, "  Speed: |%d|\n", part->ep_mod_speed);
+	bprintf(out, "  Depth: |%d|\n", part->ep_mod_depth);
 	bprintf(out, "\n");
 
-	bprintf(out, "\n");
-	bprintf(out, "Groove Type: |%d| %s\n", part->ep_groove_type,
-	    e2c_get_name(e2c_groove_type_names, part->ep_groove_type));
-	bprintf(out, "Groove Depth: |%d|\n", part->ep_groove_depth);
-
-
-	bprintf(out, "\n");
-	bprintf(out, "IFX: |%d| %s\n", part->ep_ifx_on,
+	bprintf(out, "FX\n");
+	bprintf(out, " IFX: |%d| %s\n", part->ep_ifx_on,
 	    e2c_get_name(e2c_ifx_on_names, part->ep_ifx_on));
 	if(part->ep_ifx_on) {
 		bprintf(out, " IFX Type: |%d| %s\n", part->ep_ifx_type,
 		    e2c_get_name(e2c_ifx_type_names, part->ep_ifx_type));
 		bprintf(out, " IFX Edit: |%d|\n", part->ep_ifx_edit);
 	}
-		
+	bprintf(out, " MFX Send: |%d| %s\n", part->ep_mfx_send_on,
+	    e2c_get_name(e2c_mfx_send_on_names, part->ep_mfx_send_on));
+	bprintf(out, "\n");
+	
+	bprintf(out, "Amp/EG");
+	bprintf(out, " Amp Level: |%d|\n", part->ep_amp_level);
+	bprintf(out, " Amp Pan: ");
+	if(part->ep_amp_pan == 0)
+		bprintf(out, "Center");
 
+	bprintf(out, " EG on: |%d| %s\n", part->ep_eg_on,
+	    e2c_get_name(e2c_eg_on_names, part->ep_eg_on));
+	if(part->ep_eg_on) {
+		bprintf(out, " EG Attack: |%d|\n", part->ep_eg_attack);
+		bprintf(out, " EG Decay/Release: |%d|\n",
+		    part->ep_eg_decayrel);
+	}
+	bprintf(out, "\n");
 
+	bprintf(out, "Groove\n");
+	bprintf(out, " Type: |%d| %s\n", part->ep_groove_type,
+	    e2c_get_name(e2c_groove_type_names, part->ep_groove_type));
+	bprintf(out, " Depth: |%d|\n", part->ep_groove_depth);
+
+	bprintf(out, "\n");
+
+	bprintf(out, "Misc\n");
+	bprintf(out, " Mute: |%d| %s\n", part->ep_mute,
+	    e2c_get_name(e2c_mute_names, part->ep_mute));
+	bprintf(out, " Voice Assign: |%d| %s\n", part->ep_voice_assign,
+	    e2c_get_name(e2c_voice_assign_names, part->ep_voice_assign));
+	bprintf(out, " Motion Sequence: |%d| %s\n", part->ep_motion_sequence,
+	    e2c_get_name(e2c_motion_sequence_names, part->ep_motion_sequence));
+	bprintf(out, " Trigger Pad Velocity: |%d| %s\n",
+	    part->ep_tp_velocity,
+	    e2c_get_name(e2c_tp_velocity_names, part->ep_tp_velocity));
+	bprintf(out, " Scale Mode: |%d| %s\n", part->ep_scale_mode,
+	    e2c_get_name(e2c_scale_mode_names, part->ep_scale_mode));
+	bprintf(out, " Part Priority: |%d| %s\n", part->ep_part_pri,
+	    e2c_get_name(e2c_part_pri_names, part->ep_part_pri));
+	bprintf(out, " Last Step: |%d|\n", part->ep_last_step);
 	bprintf(out, "\n", partnr);
-	bprintf(out, "Last Step: |%d|\n", part->ep_last_step);
+
+	
+
+	bprintf(out, "\n");
+	
+
+
+	bprintf(out, "\n");
 
 	return 0;
 }

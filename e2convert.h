@@ -77,6 +77,7 @@ const char	*e2c_part_pri_names[];
 const char	*e2c_filt_type_names[];
 const char	*e2c_mod_type_names[];
 const char	*e2c_eg_on_names[];
+const char	*e2c_mfx_send_on_names[];
 const char	*e2c_groove_type_names[];
 const char	*e2c_ifx_on_names[];
 const char	*e2c_ifx_type_names[];
