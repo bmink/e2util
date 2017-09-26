@@ -465,16 +465,41 @@ const char      *e2c_part_pri_names[] = {
 	NULL
 };
 
-const char      *e2c_file_type_names[] = {
+const char      *e2c_filt_type_names[] = {
         "Off",			/* 0 */
         "Electribe LPF",	/* 1 */
-        "MS20 LPF",		/* 1 */
-        "MG LPF",		/* 1 */
-        "P5 LPF",		/* 1 */
-        "OB LPF",		/* 1 */
-        "Acid LPF",		/* 1 */
+        "MS20 LPF",		/* 2 */
+        "MG LPF",		/* 3 */
+        "P5 LPF",		/* 4 */
+        "OB LPF",		/* 5 */
+        "Acid LPF",		/* 6 */
 	NULL
 };
+
+const char      *e2c_mod_type_names[] = {
+	NULL
+};
+
+const char      *e2c_eg_on_names[] = {
+        "Off",			/* 0 */
+        "On",			/* 1 */
+	NULL
+};
+
+const char      *e2c_groove_type_names[] = {
+	NULL
+};
+
+const char      *e2c_ifx_on_names[] = {
+        "Off",			/* 0 */
+        "On",			/* 1 */
+	NULL
+};
+
+const char      *e2c_ifx_type_names[] = {
+	NULL
+};
+
 
 
 int
@@ -531,10 +556,47 @@ e2c_convert_soundpatch(bstr_t *out, bstr_t *sysex, int partnr)
 	    e2c_get_name(e2c_scale_mode_names, part->ep_scale_mode));
 	bprintf(out, "Part Priority: |%d| %s\n", part->ep_part_pri,
 	    e2c_get_name(e2c_part_pri_names, part->ep_part_pri));
+	bprintf(out, "\n", partnr);
 	bprintf(out, "Filter Type: |%d| %s\n", part->ep_filt_type,
-	    e2c_get_name(e2c_file_type_names, part->ep_filt_type));
+	    e2c_get_name(e2c_filt_type_names, part->ep_filt_type));
 	bprintf(out, "Filter Cutoff: |%d|\n", part->ep_filt_cutoff);
+	bprintf(out, "Filter Resonance: |%d|\n", part->ep_filt_res);
+	bprintf(out, "Filter EG Int: |%d|\n", part->ep_filt_egint);
+	bprintf(out, "\n", partnr);
+	bprintf(out, "Mod Type: |%d| %s\n", part->ep_mod_type,
+	    e2c_get_name(e2c_mod_type_names, part->ep_mod_type));
+	bprintf(out, " Mod Speed: |%d|\n", part->ep_mod_speed);
+	bprintf(out, " Mod Depth: |%d|\n", part->ep_mod_depth);
+	bprintf(out, "\n", partnr);
+	bprintf(out, "EG: |%d| %s\n", part->ep_eg_on,
+	    e2c_get_name(e2c_eg_on_names, part->ep_eg_on));
+	if(part->ep_eg_on) {
+		bprintf(out, " EG Attack: |%d|\n", part->ep_eg_attack);
+		bprintf(out, " EG Decay/Release: |%d|\n",
+		    part->ep_eg_decayrel);
+	}
 
+	bprintf(out, "Amp Level: |%d|\n", part->ep_amp_level);
+	bprintf(out, "Amp Pan: ");
+	if(part->ep_amp_pan == 0)
+		bprintf(out, "Center");
+	bprintf(out, "\n");
+
+	bprintf(out, "\n");
+	bprintf(out, "Groove Type: |%d| %s\n", part->ep_groove_type,
+	    e2c_get_name(e2c_groove_type_names, part->ep_groove_type));
+	bprintf(out, "Groove Depth: |%d|\n", part->ep_groove_depth);
+
+
+	bprintf(out, "\n");
+	bprintf(out, "IFX: |%d| %s\n", part->ep_ifx_on,
+	    e2c_get_name(e2c_ifx_on_names, part->ep_ifx_on));
+	if(part->ep_ifx_on) {
+		bprintf(out, " IFX Type: |%d| %s\n", part->ep_ifx_type,
+		    e2c_get_name(e2c_ifx_type_names, part->ep_ifx_type));
+		bprintf(out, " IFX Edit: |%d|\n", part->ep_ifx_edit);
+	}
+		
 
 
 	bprintf(out, "\n", partnr);

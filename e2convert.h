@@ -23,12 +23,12 @@ typedef struct e2_part {
 	unsigned char	ep_mod_speed;				/* 17	 */
 	unsigned char	ep_mod_depth;				/* 18	 */
 	unsigned char	ep_reserved3;				/* 19	 */
-	unsigned char	ep_env_attack;				/* 20	 */
-	unsigned char	ep_env_decayrel;			/* 21 	 */
+	unsigned char	ep_eg_attack;				/* 20	 */
+	unsigned char	ep_eg_decayrel;				/* 21 	 */
 	unsigned short	ep_reserved4;				/* 22,23 */
 	unsigned char	ep_amp_level;				/* 24	 */
 	unsigned char	ep_amp_pan;				/* 25	 */
-	unsigned char	ep_env_on;				/* 26	 */
+	unsigned char	ep_eg_on;				/* 26	 */
 	unsigned char	ep_mfx_send_on;				/* 27	 */
 	unsigned char	ep_groove_type;				/* 28	 */
 	unsigned char	ep_groove_depth;			/* 29	 */
@@ -74,7 +74,12 @@ const char	*e2c_motion_sequence_names[];
 const char	*e2c_tp_velocity_names[];
 const char	*e2c_scale_mode_names[];
 const char	*e2c_part_pri_names[];
-const char	*e2c_file_type_names[];
+const char	*e2c_filt_type_names[];
+const char	*e2c_mod_type_names[];
+const char	*e2c_eg_on_names[];
+const char	*e2c_groove_type_names[];
+const char	*e2c_ifx_on_names[];
+const char	*e2c_ifx_type_names[];
 
 
 
