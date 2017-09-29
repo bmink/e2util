@@ -37,7 +37,7 @@ typedef struct e2_part {
 	unsigned char	ep_ifx_type;				/* 33	 */
 	unsigned char	ep_ifx_edit;				/* 34	 */
 	unsigned char	ep_reserved6;				/* 35	 */
-	unsigned char	ep_osc_pitch;				/* 36	 */
+	char		ep_osc_pitch;				/* 36	 */
 	unsigned char	ep_osc_glide;				/* 37	 */
 } e2_part_t;
 

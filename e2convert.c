@@ -422,7 +422,6 @@ const char	*e2c_osc_type_names[] = {
         "Bell3 [Instrument]",		/* 407 */
         "Bell4 [Instrument]",		/* 408 */
         "Audio In [Audio In]",		/* 409 */
-
 	NULL
 };
 
@@ -473,10 +472,74 @@ const char      *e2c_filt_type_names[] = {
         "P5 LPF",		/* 4 */
         "OB LPF",		/* 5 */
         "Acid LPF",		/* 6 */
+        "Electribe HPF",	/* 7 */
+        "MS20 HPF",		/* 8 */
+        "P5 HPF",		/* 9 */
+        "OB HPF",		/* 10 */
+        "Acid HPF",		/* 11 */
+        "Electribe BPF",	/* 12 */
+        "MS20 BPF",		/* 13 */
+        "P5 BPF",		/* 14 */
+        "OB BPF",		/* 15 */
+        "Acid BPF",		/* 16 */
 	NULL
 };
 
 const char      *e2c_mod_type_names[] = {
+        "EG+ Filter",		/* 00 */
+        "EG+ Pitch",		/* 01 */
+        "EG+ OSC",		/* 02 */
+        "EG+ Level",		/* 03 */
+        "EG+ Pan",		/* 04 */
+        "EG+ IFX",		/* 05 */
+
+        "EG+ BPM Filter",	/* 06 */
+        "EG+ BPM Pitch",	/* 07 */
+        "EG+ BPM OSC",		/* 08 */
+        "EG+ BPM Level",	/* 09 */
+        "EG+ BPM Pan",		/* 10 */
+        "EG+ BPM IFX",		/* 11 */
+
+        "EG- Filter",		/* 12 */
+        "EG- Pitch",		/* 13 */
+        "EG- OSC",		/* 14 */
+        "EG- Level",		/* 15 */
+        "EG- Pan",		/* 16 */
+        "EG- IFX",		/* 17 */
+
+        "EG- BPM Filter",	/* 18 */
+        "EG- BPM Pitch",	/* 19 */
+        "EG- BPM OSC",		/* 20 */
+        "EG- BPM Level",	/* 21 */
+        "EG- BPM Pan",		/* 22 */
+        "EG- BPM IFX",		/* 23 */
+
+
+        "",		/* 71 */
+        "",		/* 71 */
+        "",		/* 71 */
+        "",		/* 71 */
+        "",		/* 71 */
+        "",		/* 71 */
+        "",		/* 71 */
+        "",		/* 71 */
+        "",		/* 71 */
+        "",		/* 71 */
+        "",		/* 71 */
+        "",		/* 71 */
+        "",		/* 71 */
+        "",		/* 71 */
+        "",		/* 71 */
+        "",		/* 71 */
+        "",		/* 71 */
+        "",		/* 71 */
+        "",		/* 71 */
+        "",		/* 71 */
+        "",		/* 71 */
+        "",		/* 71 */
+        "",		/* 71 */
+        "",		/* 71 */
+        "",		/* 71 */
 	NULL
 };
 
@@ -548,26 +611,29 @@ e2c_convert_soundpatch(bstr_t *out, bstr_t *sysex, int partnr)
 	bprintf(out, "=== Part %d ===\n", partnr);
 	bprintf(out, "\n");
 	bprintf(out, "Oscillator\n");
-	bprintf(out, " Type: |%d| %s\n", (part->ep_osc_type + 1),
-	    e2c_get_name(e2c_osc_type_names, part->ep_osc_type + 1));
-	bprintf(out, " Edit: |%d|\n", part->ep_osc_edit);
-	bprintf(out, " Pitch: |%d|\n", part->ep_osc_pitch);
-	bprintf(out, " Glide: |%d|\n", part->ep_osc_glide);
+	bprintf(out, " Type: %03d %s\n", part->ep_osc_type + 1,
+	    e2c_get_name(e2c_osc_type_names, part->ep_osc_type));
+	bprintf(out, " Edit: %d\n", part->ep_osc_edit);
+	bprintf(out, " Pitch: %d\n", part->ep_osc_pitch);
+	bprintf(out, " Glide: %d\n", part->ep_osc_glide);
 	bprintf(out, "\n");
 
 	bprintf(out, "Filter\n");
-	bprintf(out, " Type: |%d| %s\n", part->ep_filt_type,
-	    e2c_get_name(e2c_filt_type_names, part->ep_filt_type));
-	bprintf(out, " Cutoff: |%d|\n", part->ep_filt_cutoff);
-	bprintf(out, " Resonance: |%d|\n", part->ep_filt_res);
-	bprintf(out, " EG Int: |%d|\n", part->ep_filt_egint);
+	if(part->ep_filt_type) {
+		bprintf(out, " Type: %s\n",
+		    e2c_get_name(e2c_filt_type_names, part->ep_filt_type));
+		bprintf(out, " Cutoff: |%d|\n", part->ep_filt_cutoff);
+		bprintf(out, " Resonance: |%d|\n", part->ep_filt_res);
+		bprintf(out, " EG Int: |%d|\n", part->ep_filt_egint);
+	} else
+		bprintf(out, " OFF\n");
 	bprintf(out, "\n");
 
 	bprintf(out, "Modulation\n");
-	bprintf(out, " Type: |%d| %s\n", part->ep_mod_type,
+	bprintf(out, " Type: %02d %s\n", (part->ep_mod_type + 1),
 	    e2c_get_name(e2c_mod_type_names, part->ep_mod_type));
-	bprintf(out, "  Speed: |%d|\n", part->ep_mod_speed);
-	bprintf(out, "  Depth: |%d|\n", part->ep_mod_depth);
+	bprintf(out, "  Depth: %d\n", part->ep_mod_depth);
+	bprintf(out, "  Speed: %d\n", part->ep_mod_speed);
 	bprintf(out, "\n");
 
 	bprintf(out, "FX\n");
