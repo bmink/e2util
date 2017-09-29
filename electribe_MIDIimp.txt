@@ -1,4 +1,4 @@
-KORG electribe MIDI Implementation     Revision 1.00 (Jan. 9 2015)
+	KORG electribe MIDI Implementation     Revision 1.00 (Jan. 9 2015)
 
 
 1.TRANSMITTED DATA

@@ -1,7 +1,7 @@
 #include <errno.h>
 #include "e2convert.h"
 
-const char      *e2c_osc_type_names[] = {
+const char	*e2c_osc_type_names[] = {
         "SubBeef [Kick]",		/* 001 */
         "Lazy [Kick]",			/* 002 */
         "Echoes [Kick]",		/* 003 */
@@ -209,219 +209,219 @@ const char      *e2c_osc_type_names[] = {
         "Synth Lo2 [Tom]",		/* 201 */
         "TomEight [Tom]",		/* 202 */
 
-        " [Perc.]",		/* 203 */
-        " [Perc.]",		/* 204 */
-        " [Perc.]",		/* 205 */
-        " [Perc.]",		/* 206 */
-        " [Perc.]",		/* 207 */
-        " [Perc.]",		/* 208 */
-        " [Perc.]",		/* 209 */
-        " [Perc.]",		/* 210 */
-        " [Perc.]",		/* 211 */
-        " [Perc.]",		/* 212 */
-        " [Perc.]",		/* 213 */
-        " [Perc.]",		/* 214 */
-        " [Perc.]",		/* 215 */
-        " [Perc.]",		/* 216 */
-        " [Perc.]",		/* 217 */
-        " [Perc.]",		/* 218 */
-        " [Perc.]",		/* 219 */
-        " [Perc.]",		/* 220 */
-        " [Perc.]",		/* 221 */
-        " [Perc.]",		/* 222 */
-        " [Perc.]",		/* 223 */
-        " [Perc.]",		/* 224 */
-        " [Perc.]",		/* 225 */
-        " [Perc.]",		/* 226 */
-        " [Perc.]",		/* 227 */
-        " [Perc.]",		/* 228 */
-        " [Perc.]",		/* 229 */
-        " [Perc.]",		/* 230 */
-        " [Perc.]",		/* 231 */
-        " [Perc.]",		/* 232 */
-        " [Perc.]",		/* 233 */
-        " [Perc.]",		/* 234 */
-        " [Perc.]",		/* 235 */
-        " [Perc.]",		/* 236 */
-        " [Perc.]",		/* 237 */
-        " [Perc.]",		/* 238 */
-        " [Perc.]",		/* 239 */
-        " [Perc.]",		/* 240 */
-        " [Perc.]",		/* 241 */
-        " [Perc.]",		/* 242 */
-        " [Perc.]",		/* 243 */
-        " [Perc.]",		/* 244 */
-        " [Perc.]",		/* 245 */
-        " [Perc.]",		/* 246 */
-        " [Perc.]",		/* 247 */
-        " [Perc.]",		/* 248 */
-        " [Perc.]",		/* 249 */
-        " [Perc.]",		/* 250 */
-        " [Perc.]",		/* 251 */
-        " [Perc.]",		/* 252 */
-        " [Perc.]",		/* 253 */
-        " [Perc.]",		/* 254 */
-        " [Perc.]",		/* 255 */
-        " [Perc.]",		/* 256 */
-        " [Perc.]",		/* 257 */
+        "Conga1 [Perc.]",		/* 203 */
+        "Conga2 [Perc.]",		/* 204 */
+        "Conga3 [Perc.]",		/* 205 */
+        "Conga4 [Perc.]",		/* 206 */
+        "Conga5 [Perc.]",		/* 207 */
+        "Bongo1 [Perc.]",		/* 208 */
+        "Bongo2 [Perc.]",		/* 209 */
+        "Bongo3 [Perc.]",		/* 210 */
+        "Bongo4 [Perc.]",		/* 211 */
+        "Bongo5 [Perc.]",		/* 212 */
+        "Bongo6 [Perc.]",		/* 213 */
+        "Djembe1 [Perc.]",		/* 214 */
+        "Djembe2 [Perc.]",		/* 215 */
+        "Djembe3 [Perc.]",		/* 216 */
+        "Djembe4 [Perc.]",		/* 217 */
+        "Darbuka1 [Perc.]",		/* 218 */
+        "Darbuka2 [Perc.]",		/* 219 */
+        "Darbuka3 [Perc.]",		/* 220 */
+        "Darbuka4 [Perc.]",		/* 221 */
+        "Timbales Hi [Perc.]",		/* 222 */
+        "Timbales Lo [Perc.]",		/* 223 */
+        "CowBell1 [Perc.]",		/* 224 */
+        "CowBell2 [Perc.]",		/* 225 */
+        "CowBell3 [Perc.]",		/* 226 */
+        "Tambourine1 [Perc.]",		/* 227 */
+        "Tambourine2 [Perc.]",		/* 228 */
+        "Clave [Perc.]",		/* 229 */
+        "Guiro [Perc.]",		/* 230 */
+        "Cabasa [Perc.]",		/* 231 */
+        "Shaker [Perc.]",		/* 232 */
+        "WaveDrum1 [Perc.]",		/* 233 */
+        "WaveDrum2 [Perc.]",		/* 234 */
+        "WaveDrum3 [Perc.]",		/* 235 */
+        "WaveDrum4 [Perc.]",		/* 236 */
+        "WaveDrum5 [Perc.]",		/* 237 */
+        "WaveDrum6 [Perc.]",		/* 238 */
+        "WaveDrum7 [Perc.]",		/* 239 */
+        "WaveDrum8 [Perc.]",		/* 240 */
+        "ShakerHit [Perc.]",		/* 241 */
+        "RimPerc [Perc.]",		/* 242 */
+        "Wavestation [Perc.]",		/* 243 */
+        "RimNine [Perc.]",		/* 244 */
+        "RimEight [Perc.]",		/* 245 */
+        "SynthShake [Perc.]",		/* 246 */
+        "CowbellEight [Perc.]",		/* 247 */
+        "DoncaCongaS [Perc.]",		/* 248 */
+        "DoncaCongaL [Perc.]",		/* 249 */
+        "DoncaMaracas [Perc.]",		/* 250 */
+        "DoncaClaves [Perc.]",		/* 251 */
+        "DoncaW.block [Perc.]",		/* 252 */
+        "Synthclave [Perc.]",		/* 253 */
+        "ClickRoll [Perc.]",		/* 254 */
+        "GlitchDmg [Perc.]",		/* 255 */
+        "MouthPop [Perc.]",		/* 256 */
+        "Droplet [Perc.]",		/* 257 */
 
-        " [Voice]",		/* 258 */
-        " [Voice]",		/* 259 */
-        " [Voice]",		/* 260 */
-        " [Voice]",		/* 261 */
-        " [Voice]",		/* 262 */
-        " [Voice]",		/* 263 */
-        " [Voice]",		/* 264 */
-        " [Voice]",		/* 265 */
-        " [Voice]",		/* 266 */
-        " [Voice]",		/* 267 */
-        " [Voice]",		/* 268 */
-        " [Voice]",		/* 269 */
-        " [Voice]",		/* 270 */
-        " [Voice]",		/* 271 */
-        " [Voice]",		/* 272 */
-        " [Voice]",		/* 273 */
+        "Rave [Voice]",			/* 258 */
+        "Whoo [Voice]",			/* 259 */
+        "Ohooo [Voice]",		/* 260 */
+        "ComOn [Voice]",		/* 261 */
+        "Nahh [Voice]",			/* 262 */
+        "Ahaa.. [Voice]",		/* 263 */
+        "Haa [Voice]",			/* 264 */
+        "Baaa [Voice]",			/* 265 */
+        "Grun [Voice]",			/* 266 */
+        "Ahaaw [Voice]",		/* 267 */
+        "Paa [Voice]",			/* 268 */
+        "Hey [Voice]",			/* 269 */
+        "Doh [Voice]",			/* 270 */
+        "GlitchEey [Voice]",		/* 271 */
+        "BotVox1 [Voice]",		/* 272 */
+        "BotVox2 [Voice]",		/* 273 */
 
-        " [Synth Fx]",		/* 274 */
-        " [Synth Fx]",		/* 275 */
-        " [Synth Fx]",		/* 276 */
-        " [Synth Fx]",		/* 277 */
-        " [Synth Fx]",		/* 278 */
-        " [Synth Fx]",		/* 279 */
-        " [Synth Fx]",		/* 280 */
-        " [Synth Fx]",		/* 281 */
-        " [Synth Fx]",		/* 282 */
-        " [Synth Fx]",		/* 283 */
-        " [Synth Fx]",		/* 284 */
-        " [Synth Fx]",		/* 285 */
-        " [Synth Fx]",		/* 286 */
-        " [Synth Fx]",		/* 287 */
-        " [Synth Fx]",		/* 288 */
-        " [Synth Fx]",		/* 289 */
-        " [Synth Fx]",		/* 290 */
-        " [Synth Fx]",		/* 291 */
+        "NoizyVox [Synth Fx]",		/* 274 */
+        "Noiser [Synth Fx]",		/* 275 */
+        "Botox [Synth Fx]",		/* 276 */
+        "ShockSonar [Synth Fx]",	/* 277 */
+        "Quark [Synth Fx]",		/* 278 */
+        "ebPerc [Synth Fx]",		/* 279 */
+        "Needle [Synth Fx]",		/* 280 */
+        "SqueakyBum [Synth Fx]",	/* 281 */
+        "SynSiren [Synth Fx]",		/* 282 */
+        "Bubble [Synth Fx]",		/* 283 */
+        "Burp [Synth Fx]",		/* 284 */
+        "Lux [Synth Fx]",		/* 285 */
+        "Squirt [Synth Fx]",		/* 286 */
+        "Degraded [Synth Fx]",		/* 287 */
+        "Flyby [Synth Fx]",		/* 288 */
+        "SonicDrop [Synth Fx]",		/* 289 */
+        "LoZap [Synth Fx]",		/* 290 */
+        "SubBang [Synth Fx]",		/* 291 */
 
-        " [Synth Hit]",		/* 292 */
-        " [Synth Hit]",		/* 293 */
-        " [Synth Hit]",		/* 294 */
-        " [Synth Hit]",		/* 295 */
-        " [Synth Hit]",		/* 296 */
-        " [Synth Hit]",		/* 297 */
-        " [Synth Hit]",		/* 298 */
-        " [Synth Hit]",		/* 299 */
-        " [Synth Hit]",		/* 300 */
-        " [Synth Hit]",		/* 301 */
-        " [Synth Hit]",		/* 302 */
-        " [Synth Hit]",		/* 303 */
-        " [Synth Hit]",		/* 304 */
-        " [Synth Hit]",		/* 305 */
-        " [Synth Hit]",		/* 306 */
-        " [Synth Hit]",		/* 307 */
-        " [Synth Hit]",		/* 308 */
-        " [Synth Hit]",		/* 309 */
+        "Stabium [Synth Hit]",		/* 292 */
+        "Futurize [Synth Hit]",		/* 293 */
+        "LilChord [Synth Hit]",		/* 294 */
+        "Ploinky [Synth Hit]",		/* 295 */
+        "Strippa [Synth Hit]",		/* 296 */
+        "BigChords [Synth Hit]",	/* 297 */
+        "StarBurst [Synth Hit]",	/* 298 */
+        "WishWash [Synth Hit]",		/* 299 */
+        "BangPop [Synth Hit]",		/* 300 */
+        "RegulatePop [Synth Hit]",	/* 301 */
+        "TigerPad [Synth Hit]",		/* 302 */
+        "LofiSynth [Synth Hit]",	/* 303 */
+        "BlastBass [Synth Hit]",	/* 304 */
+        "BenderBass [Synth Hit]",	/* 305 */
+        "RockHit1 [Synth Hit]",		/* 306 */
+        "RockHit2 [Synth Hit]",		/* 307 */
+        "FormantBass [Synth Hit]",	/* 308 */
+        "SynGrowl [Synth Hit]",		/* 309 */
 
-        " [Inst.Hit]",		/* 310 */
-        " [Inst.Hit]",		/* 311 */
-        " [Inst.Hit]",		/* 312 */
-        " [Inst.Hit]",		/* 313 */
-        " [Inst.Hit]",		/* 314 */
-        " [Inst.Hit]",		/* 315 */
-        " [Inst.Hit]",		/* 316 */
-        " [Inst.Hit]",		/* 317 */
-        " [Inst.Hit]",		/* 318 */
-        " [Inst.Hit]",		/* 319 */
-        " [Inst.Hit]",		/* 320 */
-        " [Inst.Hit]",		/* 321 */
-        " [Inst.Hit]",		/* 322 */
-        " [Inst.Hit]",		/* 323 */
-        " [Inst.Hit]",		/* 324 */
-        " [Inst.Hit]",		/* 325 */
+        "BrassHit1 [Inst.Hit]",		/* 310 */
+        "BrassHit2 [Inst.Hit]",		/* 311 */
+        "StringsHit1 [Inst.Hit]",	/* 312 */
+        "StringsHit2 [Inst.Hit]",	/* 313 */
+        "BadOrch [Inst.Hit]",		/* 314 */
+        "CarmOrch [Inst.Hit]",		/* 315 */
+        "Sho2DOrch [Inst.Hit]",		/* 316 */
+        "V2Orch [Inst.Hit]",		/* 317 */
+        "Suspended [Inst.Hit]",		/* 318 */
+        "Jazz [Inst.Hit]",		/* 319 */
+        "Jazzy [Inst.Hit]",		/* 320 */
+        "Hop [Inst.Hit]",		/* 321 */
+        "OldBrass [Inst.Hit]",		/* 322 */
+        "Record [Inst.Hit]",		/* 323 */
+        "Rave [Inst.Hit]",		/* 324 */
+        "Oldie [Inst.Hit]",		/* 325 */
 
-        " [Synth]",		/* 326 */
-        " [Synth]",		/* 327 */
-        " [Synth]",		/* 328 */
-        " [Synth]",		/* 329 */
-        " [Synth]",		/* 330 */
-        " [Synth]",		/* 331 */
-        " [Synth]",		/* 332 */
-        " [Synth]",		/* 333 */
-        " [Synth]",		/* 334 */
-        " [Synth]",		/* 335 */
-        " [Synth]",		/* 336 */
-        " [Synth]",		/* 337 */
-        " [Synth]",		/* 338 */
-        " [Synth]",		/* 339 */
-        " [Synth]",		/* 340 */
-        " [Synth]",		/* 341 */
-        " [Synth]",		/* 342 */
-        " [Synth]",		/* 343 */
-        " [Synth]",		/* 344 */
-        " [Synth]",		/* 345 */
-        " [Synth]",		/* 346 */
-        " [Synth]",		/* 347 */
-        " [Synth]",		/* 348 */
-        " [Synth]",		/* 349 */
-        " [Synth]",		/* 350 */
-        " [Synth]",		/* 351 */
-        " [Synth]",		/* 352 */
-        " [Synth]",		/* 353 */
-        " [Synth]",		/* 354 */
-        " [Synth]",		/* 355 */
-        " [Synth]",		/* 356 */
-        " [Synth]",		/* 357 */
-        " [Synth]",		/* 358 */
-        " [Synth]",		/* 359 */
-        " [Synth]",		/* 360 */
-        " [Synth]",		/* 361 */
-        " [Synth]",		/* 362 */
-        " [Synth]",		/* 363 */
-        " [Synth]",		/* 364 */
-        " [Synth]",		/* 365 */
-        " [Synth]",		/* 366 */
-        " [Synth]",		/* 367 */
-        " [Synth]",		/* 368 */
-        " [Synth]",		/* 369 */
-        " [Synth]",		/* 370 */
-        " [Synth]",		/* 371 */
-        " [Synth]",		/* 372 */
-        " [Synth]",		/* 373 */
-        " [Synth]",		/* 374 */
-        " [Synth]",		/* 375 */
-        " [Synth]",		/* 376 */
-        " [Synth]",		/* 377 */
-        " [Synth]",		/* 378 */
-        " [Synth]",		/* 379 */
-        " [Synth]",		/* 380 */
+        "SAW [Synth]",			/* 326 */
+        "BOOST-SAW [Synth]",		/* 327 */
+        "PULSE [Synth]",		/* 328 */
+        "TRIANGLE [Synth]",		/* 329 */
+        "SINE [Synth]",			/* 330 */
+        "DUAL-SAW [Synth]",		/* 331 */
+        "DUAL-SQU [Synth]",		/* 332 */
+        "DUAL-TRI [Synth]",		/* 333 */
+        "DUAL-SINE [Synth]",		/* 334 */
+        "OCT-SAW [Synth]",		/* 335 */
+        "OCT-SQU [Synth]",		/* 336 */
+        "OCT-TRI [Synth]",		/* 337 */
+        "OCT-SINE [Synth]",		/* 338 */
+        "UNI-SAW [Synth]",		/* 339 */
+        "UNI-SQU [Synth]",		/* 340 */
+        "UNI-TRI [Synth]",		/* 341 */
+        "UNI-SINE [Synth]",		/* 342 */
+        "SYNC-SAW [Synth]",		/* 343 */
+        "SYNC-SQU [Synth]",		/* 344 */
+        "SYNC-TRI [Synth]",		/* 345 */
+        "SYNC-SINE [Synth]",		/* 346 */
+        "CHIP-TRI 1 [Synth]",		/* 347 */
+        "CHIP-TRI 2 [Synth]",		/* 348 */
+        "CHIP-PULSE [Synth]",		/* 349 */
+        "CHIP-NOISE [Synth]",		/* 350 */
+        "RING-SAW [Synth]",		/* 351 */
+        "RING-SQU [Synth]",		/* 352 */
+        "RING-TRI [Synth]",		/* 353 */
+        "RING-SINE [Synth]",		/* 354 */
+        "X-SAW 1 [Synth]",		/* 355 */
+        "X-SAW 2 [Synth]",		/* 356 */
+        "X-SQUARE 1 [Synth]",		/* 357 */
+        "X-SQUARE 2 [Synth]",		/* 358 */
+        "X-TRI 1 [Synth]",		/* 359 */
+        "X-TRI 2 [Synth]",		/* 360 */
+        "X-SINE 1 [Synth]",		/* 361 */
+        "X-SINE 2 [Synth]",		/* 362 */
+        "VPM-SAW [Synth]",		/* 363 */
+        "VPM-SQUARE [Synth]",		/* 364 */
+        "VPM-TRI [Synth]",		/* 365 */
+        "VPM-SINE 1 [Synth]",		/* 366 */
+        "VPM-SINE 2 [Synth]",		/* 367 */
+        "VPM-SINE 3 [Synth]",		/* 368 */
+        "VPM-SINE 4 [Synth]",		/* 369 */
+        "SYN-SINE 1 [Synth]",		/* 370 */
+        "SYN-SINE 2 [Synth]",		/* 371 */
+        "SYN-SINE 3 [Synth]",		/* 372 */
+        "SYN-SINE 4 [Synth]",		/* 373 */
+        "SYN-SINE 5 [Synth]",		/* 374 */
+        "SYN-SINE 6 [Synth]",		/* 375 */
+        "SYN-SINE 7 [Synth]",		/* 376 */
+        "HPF NOISE [Synth]",		/* 377 */
+        "LPF NOISE [Synth]",		/* 378 */
+        "LOFI NOISE [Synth]",		/* 379 */
+        "RES NOISE [Synth]",		/* 380 */
 
-        " [Instrument]",		/* 381 */
-        " [Instrument]",		/* 382 */
-        " [Instrument]",		/* 383 */
-        " [Instrument]",		/* 384 */
-        " [Instrument]",		/* 385 */
-        " [Instrument]",		/* 386 */
-        " [Instrument]",		/* 387 */
-        " [Instrument]",		/* 388 */
-        " [Instrument]",		/* 389 */
-        " [Instrument]",		/* 390 */
-        " [Instrument]",		/* 391 */
-        " [Instrument]",		/* 392 */
-        " [Instrument]",		/* 393 */
-        " [Instrument]",		/* 394 */
-        " [Instrument]",		/* 395 */
-        " [Instrument]",		/* 396 */
-        " [Instrument]",		/* 397 */
-        " [Instrument]",		/* 398 */
-        " [Instrument]",		/* 399 */
-        " [Instrument]",		/* 400 */
-        " [Instrument]",		/* 401 */
-        " [Instrument]",		/* 402 */
-        " [Instrument]",		/* 403 */
-        " [Instrument]",		/* 404 */
-        " [Instrument]",		/* 405 */
-        " [Instrument]",		/* 406 */
-        " [Instrument]",		/* 407 */
-        " [Instrument]",		/* 408 */
-        "Audio In [Audio In]",	/* 409 */
+        "M1 Piano [Instrument]",	/* 381 */
+        "E.P.Roads [Instrument]",	/* 382 */
+        "E.P.Wurly [Instrument]",	/* 383 */
+        "Clav [Instrument]",		/* 384 */
+        "M1 Organ [Instrument]",	/* 385 */
+        "Brass Ens. [Instrument]",	/* 386 */
+        "Tenor Sax [Instrument]",	/* 387 */
+        "Alto Sax [Instrument]",	/* 388 */
+        "Strings Ens. [Instrument]",	/* 389 */
+        "Strings Pizz [Instrument]",	/* 390 */
+        "Vox Pop Ah [Instrument]",	/* 391 */
+        "Vox Pad [Instrument]",		/* 392 */
+        "Vox Helium [Instrument]",	/* 393 */
+        "A.Bass [Instrument]",		/* 394 */
+        "E.Bass Finger [Instrument]",	/* 395 */
+        "E.Bass Pick [Instrument]",	/* 396 */
+        "E.Bass Slap [Instrument]",	/* 397 */
+        "E.Bass Dist. [Instrument]",	/* 398 */
+        "A.Guitar [Instrument]",	/* 399 */
+        "E.Guitar 1 [Instrument]",	/* 400 */
+        "E.Guitar 2 [Instrument]",	/* 401 */
+        "Kalimba [Instrument]",		/* 402 */
+        "Metal Bell [Instrument]",	/* 403 */
+        "GamelanWave [Instrument]",	/* 404 */
+        "Bell1 [Instrument]",		/* 405 */
+        "Bell2 [Instrument]",		/* 406 */
+        "Bell3 [Instrument]",		/* 407 */
+        "Bell4 [Instrument]",		/* 408 */
+        "Audio In [Audio In]",		/* 409 */
 
 	NULL
 };
